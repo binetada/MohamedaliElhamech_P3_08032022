@@ -1,0 +1,173 @@
+//==========[ home ]==========
+#home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        background-color: #f6f6f6;
+        padding: 50px 16px;
+
+    }
+    .section-content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    //==========[ card ]==========
+    .card {
+        display: flex;
+        
+        article {
+            position: relative;
+            background-color: #fff;
+            border-radius: 18px;
+            z-index: 1;
+            width: 100%;
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                border-radius: inherit;
+                box-shadow: 0px 2px 2px #f2f3f3, 
+                            0px 4px 4px #f2f3f3,
+                            0px 6px 6px #f2f3f3;
+                filter: brightness(0.95);
+                transition: filter 0.2s ease-in-out;
+            }
+            &:hover::after {
+                filter: brightness(0.9);
+            }
+            &.new::before {
+                position: absolute;
+                content: "Nouveau";
+                padding: 10px;
+                top: 20px;
+                right: 20px;
+                background-color: #99e2d0;
+            }
+        }
+        figure {
+            height: 180px;
+            img {
+                border-top-left-radius: 18px;
+                border-top-right-radius: 18px;
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 14px 25px 14px 10px;
+        }
+        h3 {
+            display: flex;
+            justify-content: space-between;
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    animation: heart 1s forwards;
+                }
+            }
+        }
+    }
+
+    //==========[ location ]==========
+    .location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        height: 50px;
+        background-color: #eaeaea;
+        p {
+            font-weight: bold;
+            opacity: 1;
+        }
+    }
+
+    //==========[ preview ]==========
+    #preview {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h2 {
+            padding: 0 36px;
+        }
+    }
+
+    //==========[ operating-steps ]==========
+    #operating-steps {
+        background-color: #fff;
+        h2{
+            padding-left: 10px;
+        }
+        .section-content {
+            position: relative;
+        }
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            padding: 0 32.5px;
+            background-color: #f6f6f6;
+            height: 70px;
+            border-radius: 15px;
+            box-shadow: 0 0 16px 0 rgba(#413737, 0.3);
+            margin-left: 10px;
+            &:hover {
+                background-color: #f5edff;
+                i{
+                    color: $primary;
+                }
+            }
+            i {
+                color: #7e7e7e;
+            }
+            span {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                color: white;
+                background-color: $primary;
+                width: 25px;
+                height: 25px;
+                left: -12.5px;
+                border-radius: 50%;
+            }
+            p {
+                font-weight: 600;
+            }
+        }
+    }
+    
+    //==========[ desktop ]==========
+    @media screen and (min-width: $desktop-min-width) {
+
+        //==========[ operating-steps ]==========
+        #operating-steps .section-content{
+            flex-direction: row;  
+        }
+
+        //==========[ restaurants ]==========-
+        #restaurants {
+            .section-content {
+                flex-direction: row;
+            }
+            .card {
+                width: calc(50% - 12px);
+            }
+        }
+    }
+}

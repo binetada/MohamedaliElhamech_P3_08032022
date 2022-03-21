@@ -1,0 +1,45 @@
+//==========[ keyframes ]==========
+@keyframes loader {
+    from {
+        z-index: 1000;
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    to {
+        z-index: -1000;
+        opacity: 0;
+    }
+}
+@keyframes loader-spinner {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes heart {
+    from {
+        opacity: 0;
+        color: $primary;
+        font-weight: 600;
+    }
+    to {
+        font-weight: 600;
+        opacity: 1;
+        color: $primary;
+    }
+}
+@keyframes menu-list {
+    from {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+

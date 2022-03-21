@@ -1,0 +1,23 @@
+/*==========[ buttons ]==========-*/
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 50px;
+  background: linear-gradient(-15deg, $primary, $secondary);
+  color: white;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  margin: 0 auto;
+  padding: 0px 24px;
+  transition: box-shadow .5s, background .5s;
+  
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(-15deg, rgba($primary,0.8), rgba($secondary,0.8));
+  }
+}
+  

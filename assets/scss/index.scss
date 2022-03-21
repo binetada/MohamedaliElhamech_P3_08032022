@@ -1,0 +1,19 @@
+//========== bases ==========
+@import './base/fonts';
+@import './base/base';
+
+//========== utils ==========
+@import "./utils/variables";
+@import "./utils/keyframes";
+
+//========== components ==========
+@import './components/buttons';
+
+//========== layout ==========
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/loader";
+
+//========== pages ==========
+@import "./pages/home";
+@import "./pages/menu";
